@@ -1,0 +1,13 @@
+name: StarData
+title: StarData
+username: kevin9605horrell
+account: kevin9605horrell
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13580405
+bundleId: 9505172
+url: https://kevin9605horrell.shinyapps.io/StarData/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app_data.RData|HR Code.R|More stars.R|Named Stars Data.R|Publish App.R|setup.R|stars.RData
