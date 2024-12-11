@@ -1,11 +1,10 @@
-#Shiny App with star data
 
+#Shiny App with star data
 library(shiny)
 library(tidyverse)
-install.packages('DT')
 library(DT)
 
-load('app/appdata.RData')
+load('appdata.RData')
 
 
 # Define UI for application that creates a geom_point chart
