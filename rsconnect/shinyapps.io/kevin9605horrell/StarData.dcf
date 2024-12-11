@@ -5,7 +5,7 @@ account: kevin9605horrell
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 13580405
-bundleId: 9505172
+bundleId: 9505660
 url: https://kevin9605horrell.shinyapps.io/StarData/
 version: 1
 asMultiple: FALSE

@@ -10,10 +10,10 @@ load('appdata.RData')
 # Define UI for application that creates a geom_point chart
 ui <- fluidPage(
   
-  titlePanel("Diagram of The Stars in Our Sky"),
+  titlePanel("Chart of The Visible Stars in Our Sky"),
   
   h4("This app allows your to view data about stars based on their size, magnitude, temperature, and spectral class."),
-  h4("You can click on a star and see it's metadata."),
+  h4("You can click on a star and see more information about it and others like it."),
   
   #Sidebar layout
   sidebarLayout(
@@ -58,7 +58,7 @@ ui <- fluidPage(
   ),
 
     mainPanel(
-      plotOutput("distPlot", click = "plot_click"),
+      plotOutput("distPlot", width = "800", height = "500", click = "plot_click"),
       DTOutput("star_details")
     )
 
@@ -81,7 +81,8 @@ server <- function(input, output) {
   output$distPlot <- renderPlot({
     ggplot(stars_react()) +
       geom_point(aes(x = temp_K, y = absmag_M, fill = star_color, size = radius), shape = 23, alpha = 0.5) +
-      scale_fill_manual(values = colors, name = "Star Type") +
+      scale_fill_manual(values = colors, name = "Star Color") +
+      scale_size_continuous(range = c(5, 15), name = "Radius (R/Rsun)") +
       scale_y_reverse() +
       scale_x_reverse() +
       coord_cartesian(

@@ -94,7 +94,7 @@ ggplot(stars_final) +
     ylim = c(21, -12)) +
   xlab("Temperature (K)") +
   ylab("Absolute Magnitude") +
-  theme_black() +
+  theme_dark() +
   theme(legend.position = "right")
 
 #Luminosity Plot
